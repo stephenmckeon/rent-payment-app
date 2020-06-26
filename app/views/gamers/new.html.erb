@@ -1,0 +1,12 @@
+<%= form_for @gamer do |f| %>
+  <%= f.label :name, "Name: " %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :username, "Username: " %>
+  <%= f.text_field :username %><br>
+
+  <%= f.label :password, "Password: " %>
+  <%= f.text_field :password %><br>
+
+  <%= f.submit %>
+<% end %>

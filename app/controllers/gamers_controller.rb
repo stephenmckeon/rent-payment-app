@@ -4,9 +4,11 @@ class GamersController < ApplicationController
   end
 
   def show
+    @gamer = Gamer.find(params[:id])
   end
 
   def new
+    @gamer = Gamer.new
   end
 
   def create
