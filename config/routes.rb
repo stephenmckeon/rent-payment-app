@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :platforms
+  # resources :platforms
   resources :gamers
-  resources :video_games
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # resources :video_games
+  resources :sessions, only: [:create]
+  get "/", to: "application#index"
+  get "/signin", to: "sessions#new"
 end

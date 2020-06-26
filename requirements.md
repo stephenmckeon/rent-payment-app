@@ -4,12 +4,19 @@ Add notes below each checkbox with how your application has met the requirement
 
 Requirements:
 - [x] Uses Ruby on Rails
-- [ ] Includes at least one has_many relationship (e.g. User has_many Recipes)
-- [ ] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
-- [ ] Includes at least two has_many through relationships (e.g. a `Recipe` could `has_many` `Item`s through `Ingredient`s)
-- [ ] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
+- [x] Includes at least one has_many relationship (e.g. User has_many Recipes)
+  <!-- Platform has_many video_games -->
+- [x] Includes at least one belongs_to relationship (e.g. Post belongs_to User)
+  <!-- VideoGame belongs_to platform -->
+- [x] Includes at least two has_many through relationships (e.g. a `Recipe` could `has_many` `Item`s through `Ingredient`s)
+  <!-- Platform has_many gamers through video_games & Gamer has_many platforms through video_games -->
+  <!-- VideoGame has_many gamers through gaming_sessions & Gamer has_many :video_games, through: :gaming_sessions -->
+- [x] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
+  <!-- Gamer has a name, gamertag, and password; GamingSession has a start_time, end_time, and rating; Platform has a name, developer, and release_datte; VideoGame has a name, release_date, and genre. -->
 - [ ] Includes reasonable validations
-- [ ] Includes a class level ActiveRecord scope method
+  <!-- Gamer validate for presence of name, gamertag, and password, for uniqueness of username, and for password requirements.  -->
+- [x] Includes a class level ActiveRecord scope method
+  <!-- ApplicationRecord inherits from ActiveRecord::Base -->
 - [ ] Includes signup, login and logout functionality (e.g. Devise)
 - [ ] Includes nested resource show or index (e.g. users/2/recipes)
 - [ ] Includes nested resource form (recipes/1/ingredients/new)
