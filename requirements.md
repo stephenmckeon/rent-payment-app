@@ -17,7 +17,8 @@ Requirements:
   <!-- Gamer validate for presence of name, gamertag, and password, for uniqueness of username, and for password requirements.  -->
 - [x] Includes a class level ActiveRecord scope method
   <!-- ApplicationRecord inherits from ActiveRecord::Base -->
-- [ ] Includes signup, login and logout functionality (e.g. Devise)
+- [x] Includes signup, login and logout functionality (e.g. Devise)
+  <!-- A gamer can signin, signout, and sign up -->
 - [ ] Includes nested resource show or index (e.g. users/2/recipes)
 - [ ] Includes nested resource form (recipes/1/ingredients/new)
 - [ ] Includes form display of validation errors
