@@ -4,10 +4,17 @@ class SessionsController < ApplicationController
 
   def create
     @gamer = Gamer.find_by(gamertag: params[:gamertag])
-    return redirect_to "/signin" unless @gamer.authenticate(params[:password])
 
-    session[:gamer_id] = @gamer.id
-    redirect_to "/"
+    if @gamer
+      if @gamer.authenticate(params[:password])
+        session[:gamer_id] = @gamer.id
+        redirect_to "/"
+      else
+        return redirect_to "/signin"
+      end
+    else
+      return redirect_to "/signin"
+    end
   end
 
   def destroy

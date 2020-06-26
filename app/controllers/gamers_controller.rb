@@ -16,7 +16,7 @@ class GamersController < ApplicationController
     @gamer = Gamer.new(gamer_params)
 
     if @gamer.save
-      redirect_to gamer_path(@gamer)
+      redirect_to signin_path
     else
       render "new"
     end
