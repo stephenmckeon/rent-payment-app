@@ -1,0 +1,14 @@
+<%= form_for @gaming_session do |f| %>
+  <%= f.hidden_field :gamer_id, value: @gamer.id %>
+
+  <%= f.label :video_game_id, "What game did you play?" %>
+  <%= f.collection_select :video_game_id, VideoGame.all, :id, :name %><br><br>
+
+  <%= f.label :start_time %>
+  <%= f.datetime_field :start_time %><br>
+
+  <%= f.label :end_time %>
+  <%= f.datetime_field :end_time %><br><br>
+
+  <%= f.submit %>
+<% end %>

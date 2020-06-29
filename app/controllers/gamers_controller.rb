@@ -5,7 +5,11 @@ class GamersController < ApplicationController
     @gamers = Gamer.all
   end
 
-  def show; end
+  def show
+    @gaming_sessions = @gamer.gaming_sessions.sort_by(&:start_time).reverse
+    @platforms = @gamer.platforms.uniq
+    @video_games = @gamer.video_games.uniq
+  end
 
   def new
     @gamer = Gamer.new

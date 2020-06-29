@@ -14,7 +14,8 @@ Requirements:
 - [x] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
   <!-- Gamer has a name, gamertag, and password; GamingSession has a start_time, end_time, and rating; Platform has a name, developer, and release_datte; VideoGame has a name, release_date, and genre. -->
 - [ ] Includes reasonable validations
-  <!-- Gamer validate for presence of name, gamertag, and password, for uniqueness of username, and for password requirements.  -->
+  <!-- Gamer validates for presence of name, gamertag, and password, for uniqueness of username, and for password requirements.  -->
+  <!-- VideoGame validates for presence of name, release_date, and genre, and for uniqueness of name within a platform. -->
 - [ ] Includes a class level ActiveRecord scope method
   <!-- https://guides.rubyonrails.org/active_record_querying.html#scopes -->
 - [x] Includes signup, login and logout functionality (e.g. Devise)
@@ -26,6 +27,7 @@ Requirements:
   <!-- platforms/1/video_games/new will load a form to create a new video_game -->
   <!-- platforms/1/video_games/1/edit will load a form to edit a new video_game -->
 - [ ] Includes form display of validation errors
+  <!-- gamer and video_game forms show a list of errors upon invalid input -->
 - [ ] Includes Unit tests all of your models
 - [ ] Includes at least one type of Integration test (e.g. controller, request, feature, system)
 - [ ] Use FactoryBot to build instances of your models in your tests
@@ -41,4 +43,9 @@ Confirm:
 
 If you've added any additional functionality to your application that you'd like to demonstrate, please describe it below:
 
-<!-- ideas: slugs in urls -->
+<!-- ideas: slugs in urls, pictures, bootstrap -->
+to do:
+
+links
+implenment gaming session
+require login

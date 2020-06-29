@@ -1,1 +1,23 @@
-<%= @gamer.name %>
+<h1><%= @gamer.gamertag %></h1>
+  <em>member since: <%= member_since %></em><br><br>
+
+<h3>Video Games:</h3>
+  <ul>
+    <% @video_games.each do |video_game| %>
+      <li><%= video_game.name %><br></li>
+    <% end %>
+  </ul>
+
+<h3>Platforms:</h3>
+  <ul>
+    <% @platforms.each do |platform| %>
+      <li><%= platform.name %></li>
+    <% end %>
+  </ul>
+
+<h3>Recent Gaming Sessions:</h3>
+  <% @gaming_sessions.each do |session| %>
+    <%= @gamer.gamertag %> played <%= session.video_game.name %> on <%= session.readable_start_time %> for <%= session.session_length %> hour(s) -- <%= link_to "delete", gaming_session_path(session), method: :delete %> <br>
+  <% end %>
+
+<%# add in gaming stats %>
