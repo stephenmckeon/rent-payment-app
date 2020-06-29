@@ -1,0 +1,3 @@
+<% @video_games.each do |game| %>
+  <%= link_to game.name, platform_video_game_path(@platform, game) %>
+<% end %>

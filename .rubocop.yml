@@ -13,6 +13,7 @@ AllCops:
     - 'config/**'
     - 'config/**/*'
     - 'bin/**'
+    - 'node_modules/**/*'
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
@@ -36,9 +37,6 @@ Style/RedundantRegexpCharacterClass:
   Enabled: false
 
 Style/RedundantRegexpEscape:
-  Enabled: false
-
-Lint/MixedRegexpCaptureTypes:
   Enabled: false
 
 Lint/ScriptPermission:
@@ -106,12 +104,6 @@ Style/HashTransformValues:
 
 Style/Lambda:
   EnforcedStyle: literal
-
-Style/RedundantRegexpCharacterClass:
-  Enabled: false
-
-Style/RedundantRegexpEscape:
-  Enabled: false
 
 Style/RescueStandardError:
   EnforcedStyle: implicit
