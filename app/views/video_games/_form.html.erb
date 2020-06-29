@@ -1,4 +1,10 @@
 <%= form_for [@platform, @video_game] do |f| %>
+  <% if @video_game.errors.any? %>
+    <% @video_game.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+
   <%= f.hidden_field :platform_id, value: @platform.id %>
 
   <%= f.label :name, "Name: " %>
