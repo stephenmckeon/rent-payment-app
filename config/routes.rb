@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # resources :platforms
   resources :gamers
   resources :platforms do
     resources :videogames
