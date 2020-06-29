@@ -14,11 +14,11 @@ class VideoGamesController < ApplicationController
 
   def create
     @video_game = VideoGame.new(video_game_params)
-    @video_game.release_date = release_date_param
 
     if @video_game.save
       redirect_to platform_video_game_path(@platform, @video_game)
     else
+      @release_date = @video_game.release_date.to_date
       render "new"
     end
   end
@@ -43,11 +43,6 @@ private
 
   def video_game_params
     params.require(:video_game).permit(:name, :genre, :platform_id, :release_date)
-  end
-
-  def release_date_param
-    date_array = params.require(:video_game).permit(:release_date).values
-    Date.new(date_array[0].to_i, date_array[1].to_i, date_array[2].to_i)
   end
 
   def set_platform

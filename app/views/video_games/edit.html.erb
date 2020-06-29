@@ -1,8 +1,1 @@
-<%= form_for [@platform, @video_game] do |f| %>
-  <%= render partial: "form", locals: {f: f} %>
-
-  <%= f.label :release_date, "Release date: " %>
-  <%= f.date_field :release_date, start_year: 1980, end_year: 2020, value: @release_date %><br>
-
-  <%= f.submit %>
-<% end %>
+<%= render "form" %>

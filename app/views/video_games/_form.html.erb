@@ -1,7 +1,14 @@
-<%= f.hidden_field :platform_id, value: @platform.id %>
+<%= form_for [@platform, @video_game] do |f| %>
+  <%= f.hidden_field :platform_id, value: @platform.id %>
 
-<%= f.label :name, "Name: " %>
-<%= f.text_field :name %><br>
+  <%= f.label :name, "Name: " %>
+  <%= f.text_field :name %><br>
 
-<%= f.label :genre, "Genre: " %>
-<%= f.text_field :genre %><br>
+  <%= f.label :genre, "Genre: " %>
+  <%= f.text_field :genre %><br>
+
+  <%= f.label :release_date, "Release date: " %>
+  <%= f.date_field :release_date, start_year: 1980, end_year: 2020, value: @release_date %><br>
+
+  <%= f.submit %>
+<% end %>

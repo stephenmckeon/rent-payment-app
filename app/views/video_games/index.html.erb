@@ -1,5 +1,7 @@
+<h1><%= @platform.name %> Games</h1>
+
 <% @video_games.each do |game| %>
   <%= link_to game.name, platform_video_game_path(@platform, game) %><br>
-<% end %>
+<% end %><br>
 
 <%= link_to "Add a new video game on #{@platform.name}", new_platform_video_game_path %>
