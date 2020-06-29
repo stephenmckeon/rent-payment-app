@@ -8,7 +8,7 @@
   <%= f.text_field :genre %><br>
 
   <%= f.label :release_date, "Release date: " %>
-  <%= f.date_select :release_date, start_year: 1980, end_year: 2020 %><br>
+  <%= f.date_field :release_date, start_year: 1980, end_year: 2020, value: @release_date %><br>
 
   <%= f.submit %>
 <% end %>

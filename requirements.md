@@ -15,13 +15,16 @@ Requirements:
   <!-- Gamer has a name, gamertag, and password; GamingSession has a start_time, end_time, and rating; Platform has a name, developer, and release_datte; VideoGame has a name, release_date, and genre. -->
 - [ ] Includes reasonable validations
   <!-- Gamer validate for presence of name, gamertag, and password, for uniqueness of username, and for password requirements.  -->
-- [x] Includes a class level ActiveRecord scope method
-  <!-- ApplicationRecord inherits from ActiveRecord::Base -->
+- [ ] Includes a class level ActiveRecord scope method
+  <!-- https://guides.rubyonrails.org/active_record_querying.html#scopes -->
 - [x] Includes signup, login and logout functionality (e.g. Devise)
   <!-- A gamer can signin, signout, and sign up -->
 - [x] Includes nested resource show or index (e.g. users/2/recipes)
   <!-- platforms/1/video_games will load the index page for video_games -->
-- [ ] Includes nested resource form (recipes/1/ingredients/new)
+  <!-- platforms/1/video_game/1 will load the show page for that video_game -->
+- [x] Includes nested resource form (recipes/1/ingredients/new)
+  <!-- platforms/1/video_games/new will load a form to create a new video_game -->
+  <!-- platforms/1/video_games/1/edit will load a form to edit a new video_game -->
 - [ ] Includes form display of validation errors
 - [ ] Includes Unit tests all of your models
 - [ ] Includes at least one type of Integration test (e.g. controller, request, feature, system)
@@ -37,3 +40,5 @@ Confirm:
 - [ ] Views use partials if appropriate
 
 If you've added any additional functionality to your application that you'd like to demonstrate, please describe it below:
+
+<!-- ideas: slugs -->
