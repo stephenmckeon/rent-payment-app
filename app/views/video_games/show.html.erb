@@ -3,4 +3,4 @@
 <%= @platform.name %><br>
 <%= @video_game.readable_release_date %><br>
 <%= link_to "Edit", edit_platform_video_game_path(@platform, @video_game) %>
-<%= link_to "Delete"%>
+<%= link_to "Delete", platform_video_game_path(@platform, @video_game), method: :delete %>

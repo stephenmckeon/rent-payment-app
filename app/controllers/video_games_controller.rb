@@ -1,6 +1,6 @@
 class VideoGamesController < ApplicationController
   before_action :set_platform
-  before_action :set_video_game, only: %i[show edit]
+  before_action :set_video_game, only: %i[show edit update destroy]
 
   def index
     @video_games = VideoGame.where("platform_id = ?", params[:platform_id])
@@ -25,6 +25,18 @@ class VideoGamesController < ApplicationController
 
   def edit
     @release_date = @video_game.release_date.to_date
+  end
+
+  def update
+    @video_game.update(video_game_params)
+
+    redirect_to platform_video_game_path(@platform, @video_game)
+  end
+
+  def destroy
+    @video_game.delete
+
+    redirect_to platform_video_games_path(@platform)
   end
 
 private
