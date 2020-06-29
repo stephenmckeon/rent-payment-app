@@ -5,8 +5,7 @@ class GamersController < ApplicationController
     @gamers = Gamer.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @gamer = Gamer.new
@@ -22,8 +21,7 @@ class GamersController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @gamer.update(gamer_params)
