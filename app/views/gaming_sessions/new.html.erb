@@ -2,7 +2,8 @@
   <%= f.hidden_field :gamer_id, value: @gamer.id %>
 
   <%= f.label :video_game_id, "What game did you play?" %>
-  <%= f.collection_select :video_game_id, VideoGame.all, :id, :name %><br><br>
+  <%= f.collection_select :video_game_id, VideoGame.all, :id, :name %>
+    <em>or add a new game <%= link_to "here", platforms_path %></p><br></em>
 
   <%= f.label :start_time %>
   <%= f.datetime_field :start_time %><br>
