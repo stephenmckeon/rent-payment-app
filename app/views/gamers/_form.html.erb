@@ -1,4 +1,12 @@
+<h1>Create Profile</h1>
+
 <%= form_for @gamer do |f| %>
+  <% if @gamer.errors.any? %>
+    <% @gamer.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %><br>
+  <% end %>
+
   <%= f.label :name, "Name: " %>
   <%= f.text_field :name %><br>
 

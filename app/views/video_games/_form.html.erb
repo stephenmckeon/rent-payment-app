@@ -1,8 +1,9 @@
+<h1>Add a new game to <%= @platform.name %></h1>
 <%= form_for [@platform, @video_game] do |f| %>
   <% if @video_game.errors.any? %>
     <% @video_game.errors.full_messages.each do |message| %>
       <li><%= message %></li>
-    <% end %>
+    <% end %><br>
   <% end %>
 
   <%= f.hidden_field :platform_id, value: @platform.id %>
@@ -14,7 +15,7 @@
   <%= f.text_field :genre %><br>
 
   <%= f.label :release_date, "Release date: " %>
-  <%= f.date_field :release_date, start_year: 1980, end_year: 2020, value: @release_date %><br>
+  <%= f.date_field :release_date, start_year: 1980, end_year: 2020, value: @release_date %><br><br>
 
   <%= f.submit %>
 <% end %>
