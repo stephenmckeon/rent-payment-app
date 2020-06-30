@@ -1,6 +1,10 @@
 <h1><%= @platform.name %></h1>
-Developer: <%= @platform.developer %><br>
-Release Date: <%= @platform.readable_release_date %><br><br>
+
+<strong>Developer: </strong>
+<%= @platform.developer %><br>
+
+<strong>Release Date: </strong>
+<%= @platform.readable_release_date %><br><br>
 
 <%= link_to "Edit this platform", edit_platform_path(@platform) %><br>
 <%= link_to "Video Games on this platforn", platform_video_games_path(@platform) %>
