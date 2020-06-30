@@ -7,7 +7,9 @@ class SessionsController < ApplicationController
     @gamer = Gamer.find(session[:gamer_id])
   end
 
-  def new; end
+  def new
+    redirect_to "/" if session.include? :gamer_id
+  end
 
   def create
     @gamer = Gamer.find_by(gamertag: params[:gamertag])
