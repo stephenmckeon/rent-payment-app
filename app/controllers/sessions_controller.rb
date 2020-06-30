@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
     return unless session[:gamer_id]
 
     @gamer = Gamer.find(session[:gamer_id])
+    @new_games = VideoGame.new_games
   end
 
   def new

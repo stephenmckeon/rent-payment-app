@@ -8,6 +8,13 @@
 
 <%= link_to "All Gamers", gamers_path %><br>
 
-<%= link_to "All Platforms", platforms_path %><br><br>
+<%= link_to "All Platforms", platforms_path %><br>
+
+<h3>Newest Games to Check Out</h3>
+  <ul>
+    <% @new_games.each do |game| %>
+      <li><%= game.name %>: released on <%= game.readable_release_date %></li>
+    <% end %>
+  </ul><br>
 
 <%= link_to "Sign Out", session_path(@gamer), method: :delete %>

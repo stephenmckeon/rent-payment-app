@@ -13,11 +13,12 @@ Requirements:
   <!-- VideoGame has_many gamers through gaming_sessions & Gamer has_many :video_games, through: :gaming_sessions -->
 - [x] Every model contains at least at least two simple attributes (e.g. ingredient#quantity)
   <!-- Gamer has a name, gamertag, and password; GamingSession has a start_time, end_time, and rating; Platform has a name, developer, and release_datte; VideoGame has a name, release_date, and genre. -->
-- [ ] Includes reasonable validations
-  <!-- Gamer validates for presence of name, gamertag, and password, for uniqueness of username, and for password requirements.  -->
+- [x] Includes reasonable validations
+  <!-- Gamer validates for presence of name, gamertag, and password, for uniqueness of gamertag, and for password requirements.  -->
   <!-- VideoGame validates for presence of name, release_date, and genre, and for uniqueness of name within a platform. -->
-- [ ] Includes a class level ActiveRecord scope method
-  <!-- https://guides.rubyonrails.org/active_record_querying.html#scopes -->
+  <!-- Platform validates for presence of name, release_date, and developer, and for uniqueness of name -->
+- [x] Includes a class level ActiveRecord scope method
+  <!-- VideoGame.new_games returns VideoGames whose release date is in 2020 -->
 - [x] Includes signup, login and logout functionality (e.g. Devise)
   <!-- A gamer can signin, signout, and sign up -->
 - [x] Includes nested resource show or index (e.g. users/2/recipes)
