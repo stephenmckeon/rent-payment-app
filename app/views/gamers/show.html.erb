@@ -17,7 +17,9 @@
 
 <h3>Recent Gaming Sessions:</h3>
   <% @gaming_sessions.each do |session| %>
-    <%= @gamer.gamertag %> played <%= session.video_game.name %> on <%= session.readable_start_time %> for <%= session.session_length %> hour(s) -- <%= link_to "delete", gaming_session_path(session), method: :delete %> <br>
-  <% end %>
+    <%= @gamer.gamertag %> played <%= session.video_game.name %> on <%= session.readable_start_time %> for <%= session.session_length %> hour(s) <%= delete_if_signed_in %><br>
+  <% end %><br>
+
+  <%= delete_gamer_if_signed_in %>
 
 <%# add in gaming stats %>

@@ -1,3 +1,4 @@
+<h1>All Gamers</h1>
 <% @gamers.each do |gamer| %>
-  <%= gamer.gamertag %><br>
+  <%= link_to gamer.gamertag, gamer_path(gamer) %><br>
 <% end %>

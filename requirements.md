@@ -47,5 +47,5 @@ If you've added any additional functionality to your application that you'd like
 to do:
 
 links
-implenment gaming session
-require login
+show a log of all gaming activity among all gamers
+a gamer can view other gamers profiles, but not delete

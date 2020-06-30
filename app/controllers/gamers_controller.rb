@@ -35,6 +35,7 @@ class GamersController < ApplicationController
 
   def destroy
     @gamer.destroy
+    session.delete :gamer_id
 
     redirect_to "/"
   end
