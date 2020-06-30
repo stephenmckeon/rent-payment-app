@@ -1,7 +1,9 @@
 <h1>Welcome <%= @gamer.name %></h1>
 
+<%= link_to "Profile", gamer_path(@gamer) %><br>
+
 <%= link_to "New gaming session", new_gaming_session_path %><br>
 
-<%= link_to "Platforms", platforms_path %><br><br>
+<%= link_to "All Platforms", platforms_path %><br><br>
 
 <%= link_to "Sign Out", session_path(@gamer), method: :delete %>

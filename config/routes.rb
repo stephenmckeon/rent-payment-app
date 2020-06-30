@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     resources :video_games
   end
   resources :sessions, only: %i[create destroy]
-  get "/", to: "application#index"
+  get "/", to: "sessions#index"
   get "/signin", to: "sessions#new"
 end

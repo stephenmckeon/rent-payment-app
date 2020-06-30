@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
-  def index
-    return unless session[:gamer_id]
+  before_action :require_login
 
-    @gamer = Gamer.find(session[:gamer_id])
+private
+
+  def require_login
+    redirect_to "/signin" unless session.include? :gamer_id
   end
 end

@@ -1,4 +1,12 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login
+
+  def index
+    return unless session[:gamer_id]
+
+    @gamer = Gamer.find(session[:gamer_id])
+  end
+
   def new; end
 
   def create

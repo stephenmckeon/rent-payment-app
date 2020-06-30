@@ -26,7 +26,7 @@ Requirements:
 - [x] Includes nested resource form (recipes/1/ingredients/new)
   <!-- platforms/1/video_games/new will load a form to create a new video_game -->
   <!-- platforms/1/video_games/1/edit will load a form to edit a new video_game -->
-- [ ] Includes form display of validation errors
+- [x] Includes form display of validation errors
   <!-- gamer and video_game forms show a list of errors upon invalid input -->
 - [ ] Includes Unit tests all of your models
 - [ ] Includes at least one type of Integration test (e.g. controller, request, feature, system)
