@@ -29,12 +29,16 @@ Requirements:
   <!-- platforms/1/video_games/1/edit will load a form to edit a new video_game -->
 - [x] Includes form display of validation errors
   <!-- gamer and video_game forms show a list of errors upon invalid input -->
-- [ ] Includes Unit tests all of your models
-- [ ] Includes at least one type of Integration test (e.g. controller, request, feature, system)
-- [ ] Use FactoryBot to build instances of your models in your tests
-- [ ] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
+- [x] Includes Unit tests all of your models
+  <!-- all models are tested for valid attributes, Gamer also tests for valid password -->
+- [x] Includes at least one type of Integration test (e.g. controller, request, feature, system)
+  <!-- feature test in welcome_spec.rb the tests for correct welcome views given logged in and logged out -->
+- [x] Use FactoryBot to build instances of your models in your tests
+  <!-- all models have factories -->
+- [x] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
+<!-- no rubocop errors -->
 - [ ] Includes a `README.md` with an application description and installation guide
-- [ ] Create links to all pages
+- [x] Create links to all pages
 
 Confirm:
 - [ ] The application is pretty DRY
@@ -45,8 +49,3 @@ Confirm:
 If you've added any additional functionality to your application that you'd like to demonstrate, please describe it below:
 
 <!-- ideas: slugs in urls, pictures, bootstrap -->
-to do:
-
-links
-show a log of all gaming activity among all gamers
-a gamer can view other gamers profiles, but not delete - gaming_sessions/
