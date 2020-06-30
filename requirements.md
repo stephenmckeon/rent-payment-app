@@ -48,4 +48,4 @@ to do:
 
 links
 show a log of all gaming activity among all gamers
-a gamer can view other gamers profiles, but not delete
+a gamer can view other gamers profiles, but not delete - gaming_sessions/

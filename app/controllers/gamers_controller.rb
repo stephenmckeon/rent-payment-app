@@ -25,7 +25,9 @@ class GamersController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    redirect_to gamers_path unless session[:gamer_id] == @gamer.id
+  end
 
   def update
     @gamer.update(gamer_params)

@@ -20,6 +20,7 @@
     <%= @gamer.gamertag %> played <%= session.video_game.name %> on <%= session.readable_start_time %> for <%= session.session_length %> hour(s) <%= delete_if_signed_in %><br>
   <% end %><br>
 
+  <%= edit_gamer_if_signed_in %>
   <%= delete_gamer_if_signed_in %>
 
 <%# add in gaming stats %>
