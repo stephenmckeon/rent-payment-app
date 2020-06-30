@@ -1,7 +1,12 @@
 <h1><%= @video_game.name %></h1>
-<%= @video_game.genre %><br>
-<%= @platform.name %><br>
-<%= @video_game.readable_release_date %><br>
+  <strong>Platform: </strong>
+  <%= @platform.name %><br>
+
+  <strong>Genre: </strong>
+  <%= @video_game.genre %><br>
+
+  <strong>Release Date: </strong>
+  <%= @video_game.readable_release_date %><br><br>
 
 <%= link_to "Edit", edit_platform_video_game_path(@platform, @video_game) %>
 <%= link_to "Delete", platform_video_game_path(@platform, @video_game), method: :delete %>

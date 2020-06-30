@@ -1,0 +1,19 @@
+<h1>New Platform </h1>
+<%= form_for @platform do |f| %>
+  <% if @platform.errors.any? %>
+    <% @platform.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %><br>
+  <% end %>
+
+  <%= f.label :name, "Name: " %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :developer, "Develper: "%>
+  <%= f.text_field :developer %><br>
+
+  <%= f.label :release_date, "Release Date: "%>
+  <%= f.date_field :release_date, value: @release_date %><br><br>
+
+  <%= f.submit %>
+<% end %>
