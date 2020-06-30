@@ -1,5 +1,10 @@
 class GamingSessionsController < ApplicationController
   before_action :set_gamer
+  skip_before_action :set_gamer, only: :index
+
+  def index
+    @gaming_sessions = GamingSession.all
+  end
 
   def new
     @gaming_session = GamingSession.new(start_time: DateTime.now, end_time: DateTime.now)

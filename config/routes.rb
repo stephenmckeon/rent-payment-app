@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :gamers
-  resources :gaming_sessions, only: %i[new create destroy]
+  resources :gaming_sessions, only: %i[index new create destroy]
   resources :platforms do
     resources :video_games
   end

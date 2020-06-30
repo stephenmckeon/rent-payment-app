@@ -1,0 +1,4 @@
+<h1>Recent Gaming Sessions</h1>
+<% @gaming_sessions.each do |session| %>
+     <%= session.gamer.gamertag %> played <%= session.video_game.name %> on <%= session.readable_start_time %> for <%= session.session_length %> hour(s)<br>
+  <% end %><br>

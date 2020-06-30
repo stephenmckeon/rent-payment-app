@@ -1,5 +1,6 @@
 class GamersController < ApplicationController
   before_action :set_gamer, only: %i[show edit update destroy]
+  skip_before_action :require_login, only: %i[new create]
 
   def index
     @gamers = Gamer.all
@@ -12,6 +13,8 @@ class GamersController < ApplicationController
   end
 
   def new
+    redirect_to "/" if session.include? :gamer_id
+
     @gamer = Gamer.new
   end
 
@@ -36,6 +39,9 @@ class GamersController < ApplicationController
   end
 
   def destroy
+    GamingSession.all.each do |s|
+      s.delete if s.gamer == @gamer
+    end
     @gamer.destroy
     session.delete :gamer_id
 
