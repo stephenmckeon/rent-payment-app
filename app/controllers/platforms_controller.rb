@@ -5,6 +5,10 @@ class PlatformsController < ApplicationController
     @platforms = Platform.all
   end
 
+  def show
+    @gamers = @platform.gamers
+  end
+
   def new
     @platform = Platform.new
   end

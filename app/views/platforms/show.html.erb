@@ -6,5 +6,10 @@
 <strong>Release Date: </strong>
 <%= @platform.readable_release_date %><br><br>
 
+<h3>Gamers: </h3>
+  <% @gamers.each do |gamer| %>
+    <%= gamer.gamertag %><br>
+  <% end %><br>
+
 <%= link_to "Edit this platform", edit_platform_path(@platform) %><br>
 <%= link_to "Video Games on this platforn", platform_video_games_path(@platform) %>
