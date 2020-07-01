@@ -1,7 +1,5 @@
 <h1>Welcome <%= @gamer.name %></h1>
 
-<%= link_to "Profile", gamer_path(@gamer) %><br>
-
 <%= link_to "New gaming session", new_gaming_session_path %><br>
 
 <%= link_to "All gaming sessions", gaming_sessions_path %><br>
@@ -16,5 +14,3 @@
       <li><%= game.name %>: released on <%= game.readable_release_date %></li>
     <% end %>
   </ul><br>
-
-<%= link_to "Sign Out", session_path(@gamer), method: :delete %>
