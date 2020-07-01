@@ -39,9 +39,7 @@ class GamersController < ApplicationController
   end
 
   def destroy
-    GamingSession.all.each do |s|
-      s.delete if s.gamer == @gamer
-    end
+    @gamer.gaming_sessions.each(&:delete)
     @gamer.destroy
     session.delete :gamer_id
 

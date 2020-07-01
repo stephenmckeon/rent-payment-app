@@ -3,7 +3,7 @@ class GamingSessionsController < ApplicationController
   skip_before_action :set_gamer, only: :index
 
   def index
-    @gaming_sessions = GamingSession.all
+    @gaming_sessions = GamingSession.all.sort_by(&:start_time).reverse
   end
 
   def new

@@ -16,8 +16,10 @@
   </ul>
 
 <h3>Recent Gaming Sessions:</h3>
-  <% @gaming_sessions.each do |session| %>
-    <%= @gamer.gamertag %> played <%= session.video_game.name %> on <%= session.readable_start_time %> for <%= session.session_length %> hour(s) <%= delete_if_signed_in %><br>
+  <% @gaming_sessions.each do |gaming_session| %>
+    <% @session = gaming_session %>
+    <%= @gamer.gamertag %> played <%= gaming_session.video_game.name %> on <%= gaming_session.readable_start_time %> for <%= gaming_session.session_length %> hour(s) <%= delete_if_signed_in %><br>
+
   <% end %><br>
 
   <%= edit_gamer_if_signed_in %>

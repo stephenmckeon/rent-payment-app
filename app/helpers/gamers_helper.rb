@@ -6,7 +6,7 @@ module GamersHelper
   def delete_if_signed_in
     return unless session[:gamer_id] == @gamer.id
 
-    link_to "delete", gaming_session_path(session), method: :delete
+    link_to "delete", gaming_session_path(@session), method: :delete
   end
 
   def edit_gamer_if_signed_in

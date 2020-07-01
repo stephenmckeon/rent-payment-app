@@ -5,7 +5,7 @@ describe "Weclome Page", type: :feature do
     visit "/"
     expect(current_path).to eq("/")
     expect(page).to have_content "Welcome Gamers!"
-    expect(page).to have_link "Sign In", href: "/signin"
+    expect(page).to have_link "Login", href: "/signin"
     expect(page).to have_link "Sign Up", href: "/gamers/new"
   end
 
@@ -22,6 +22,6 @@ describe "Weclome Page", type: :feature do
     expect(page).to have_link "All Gamers", href: "/gamers"
     expect(page).to have_link "All Platforms", href: "/platforms"
     expect(page).to have_content "Newest Games to Check Out"
-    expect(page).to have_link "Sign Out", href: "/sessions/1"
+    expect(page).to have_button "Sign Out"
   end
 end
